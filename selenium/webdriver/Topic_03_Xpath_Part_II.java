@@ -151,6 +151,24 @@ public class Topic_03_Xpath_Part_II {
 		
 		//Kiểm tra 1 điều kiện trả về bằng vs dk mong muốn
 		Assert.assertEquals(driver.findElement(By.id("txtPhone-error")).getText(),"Số điện thoại phải từ 10-11 số.");	
+		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
+		
+		//Mở app
+		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
+		
+		//Nhập liệu
+		driver.findElement(By.id("txtFirstname")).sendKeys("Toan Nguyen");
+		driver.findElement(By.id("txtEmail")).sendKeys("Toan@gmail.com");
+		driver.findElement(By.id("txtCEmail")).sendKeys("Toan@gmail.com");
+		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("Toan12");
+		driver.findElement(By.xpath("//input[@id='txtCPassword']")).sendKeys("Toan12");
+		driver.findElement(By.id("txtPhone")).sendKeys("1901234");
+				
+		//Click vô nút đăng ký
+		driver.findElement(By.xpath("//button[@type ='submit']")).click();
+		
+		//Kiểm tra 1 điều kiện trả về bằng vs dk mong muốn
+		Assert.assertEquals(driver.findElement(By.id("txtPhone-error")).getText(),"Số điện thoại bắt đầu bằng: 09 - 03 - 012 - 016 - 018 - 019");
 	}
 	
 	@AfterClass
