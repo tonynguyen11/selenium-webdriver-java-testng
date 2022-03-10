@@ -12,7 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_03_Xpath {
+public class Topic_03_Xpath_Part_I {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 
@@ -59,7 +59,6 @@ public class Topic_03_Xpath {
 	
 	//Thao tác vs email textbox
 
-		
 	//Thao tác vs password email
 		
 	//Thao tác Logic	

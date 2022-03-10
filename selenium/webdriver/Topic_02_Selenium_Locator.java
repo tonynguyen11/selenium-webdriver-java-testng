@@ -106,6 +106,14 @@ public class Topic_02_Selenium_Locator {
 		driver.findElement(By.xpath("//a[contains(text(), 'Tiếng Việt')]"));
 		driver.findElement(By.xpath("//a[contains(text(), 'Việt')]"));
 		driver.findElement(By.xpath("//a[contains(text(), 'Tiếng')]"));
+		
+		/*we can use some techniques to find elements: 
+		 * 1. "starts-with" keyword, e.g: //input[starts-with(@id,'abc')]
+		 * 2. "contains" keyword, e.g: //img[contains(@class,'xyz')] or //a[contains(text(),'abc')]
+		 * 3. dont use any of them
+		 * 4. title goes with @: @title
+		 * 5. text goes with (): text()*/
+		
 			
 	}
 
