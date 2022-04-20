@@ -40,13 +40,13 @@ public class Topic_06_Web_Element {
 		//When interacting over 1 time => use variable to store value
 		WebElement emailTextbox = driver.findElement(By.id("email"));
 		emailTextbox.clear();
-		emailTextbox.sendKeys("test@gmail.com");
+		emailTextbox.sendKeys("test@gmail");
 		emailTextbox.isDisplayed();
 	}
 
 	@Test
 	public void TC_02_Element_Method() {
-		WebElement element = driver.findElement(By.id(""));
+		WebElement element = driver.findElement(By.id("search"));
 		
 		//Delete data before sendKeys: Textbox/ TextArea/ Editable Dropdown
 		element.clear();
@@ -82,16 +82,16 @@ public class Topic_06_Web_Element {
 		//LEARN IN FRAMEWORK: ATTACH SCREENSHOT TO REPORT HTML
 		element.getScreenshotAs(OutputType.FILE);
 		
-		element = driver.findElement(By.xpath("//div[@id='advice-validate-email-email']"));
-		element = driver.findElement(By.cssSelector("div[id='advice-validate-email-email']"));
+		element = driver.findElement(By.xpath("//input[@id='search']"));
+		element = driver.findElement(By.cssSelector("input[id='search']"));
 		
-		element = driver.findElement(By.cssSelector("div#advice-validate-email-email"));
+		element = driver.findElement(By.cssSelector("#search"));
 		//get tag name => rarely to use
 		String emailTextboxTagname = element.getTagName();
 		
 		//Output of this element will be the input of the other
 		//Passing 1 variable into a String
-		driver.findElement(By.xpath("//" + emailTextboxTagname + "[@id='advice-required-entry-pass']"));
+		driver.findElement(By.xpath("//" + emailTextboxTagname + "[@id='search']"));
 		
 		//Get text of current element/ text of sub element inside
 		element.getText();
@@ -120,15 +120,7 @@ public class Topic_06_Web_Element {
 		//Slider: click on Slider then drag the mouse
 		//Drag to the a coordinates (pixel unit)
 		//Or drag to other element
-		action.clickAndHold(element).moveToElement(element).perform();
-		
-		
-		
-		
-		
-		
-		
-		
+		action.clickAndHold(element).moveToElement(element).perform();	
 	}
 
 
